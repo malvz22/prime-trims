@@ -6,10 +6,10 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-center items-center">
+      <div className="">
         <img src='/primetrims-logo.png' className='w-[300px]' />
       </div>
-      <h1 className='text-red'>Prime Trims</h1>
+      <h1 className=''>Prime Trims</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
