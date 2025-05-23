@@ -1,26 +1,40 @@
-import { useState } from 'react'
 import './App.css'
+import Header from './components/Header/Header'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="">
-        <img src='/primetrims-logo.png' className='w-[300px]' />
-      </div>
-      <h1 className=''>Prime Trims</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Header/>
+      <main className='w-full max-w-[1024px] px-3 mx-auto'>
+        <section id='home' className="flex flex-col items-center justify-center">
+          <img src='/primetrims-logo.png' className='' />
+          <h1 className='text-white'>Haircuts for Everyone!</h1>
+          <h2 className='text-white'>Transform your look with us!</h2>
+        </section>
+        <section id='services' className='text-center flex flex-col'>
+          <h1 className='text-white mb-4'>Services</h1>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
+            <div className='border-2 border-white p-6 w-full max-w-full aspect-square justify-center items-center flex flex-col gap-3'>
+              <h5>Service Name</h5>
+              <p>Service desc.</p>
+            </div>
+            <div className='border-2 border-white p-6 w-full max-w-full aspect-square justify-center items-center flex flex-col gap-3'>
+              <h5>Service Name</h5>
+              <p>Service desc.</p>
+            </div>
+            <div className='border-2 border-white p-6 w-full max-w-full aspect-square justify-center items-center flex flex-col gap-3'>
+              <h5>Service Name</h5>
+              <p>Service desc.</p>
+            </div>
+            <div className='border-2 border-white p-6 w-full max-w-full aspect-square justify-center items-center flex flex-col gap-3'>
+              <h5>Service Name</h5>
+              <p>Service desc.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    
     </>
   )
 }
