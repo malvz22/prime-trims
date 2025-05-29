@@ -21,6 +21,7 @@ function App() {
         </section>
         <section id='services' className='text-center flex flex-col justify-center scroll-mt-22'>
           <h1>Services</h1>
+          <p className='text-white mb-4'>At Prime Trims, we believe in providing top-notch grooming services that cater to your unique style and preferences. Our skilled barbers are dedicated to delivering exceptional haircuts, shaves, and grooming experiences that leave you looking sharp and feeling confident.</p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-12 mb-12'>
             <div className='w-full max-w-full aspect-[2/1] justify-center items-center flex flex-col gap-3'>
               <Scissors size={48} />
@@ -49,9 +50,14 @@ function App() {
             </div>
           </div>
         </section>
-        <section id='experience' className='text-center flex flex-col justify-center scroll-mt-22'>
-          <h1>Experience the Best Haircut & Shave Services</h1>
-          <p className='text-white mb-4'>At Prime Trims, we believe in providing top-notch grooming services that cater to your unique style and preferences. Our skilled barbers are dedicated to delivering exceptional haircuts, shaves, and grooming experiences that leave you looking sharp and feeling confident.</p>
+        <section id='inspiration' className='text-center flex flex-col justify-center scroll-mt-22'>
+          <h1>Inspiration</h1>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-12'>
+            <img src='/result1.webp' />
+            <img src='/result2.webp' />
+            <img src='/result3.webp' />
+            <img src='/result4.webp' />
+          </div>
         </section>
       </main>
     
