@@ -10,7 +10,7 @@
 
 :root {
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -40,6 +40,7 @@ a:hover {
   min-width: 320px;
   min-height: 100vh;
 } */
+
 
 h1 {
   @apply text-5xl leading-tight text-white mb-4 font-semibold;
