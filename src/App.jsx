@@ -15,9 +15,12 @@ function App() {
           <h2 className='text-white mb-4'>Transform your look with us!</h2>
           <button>Book Now!</button>
         </section>
-        <section id='about' className='text-center flex flex-col justify-center scroll-mt-22 py-4 min-h-screen'>
+        <section id='about-us' className='text-center flex flex-col justify-center scroll-mt-22 py-4 min-h-screen'>
           <h1>Welcome to PRIME TRIMS</h1>
-          <p>Step into your new story. Prime Trims is more than just a barbershop — it's a space to relax, recharge, and transform your style. Located in the heart of the city, we bring quality grooming and a personal touch to every visit.</p>
+          <div className='flex flex-row w-full max-w-full gap-3'>
+            <img src='/barber.jpg' className='w-[50%] object-cover rounded-2xl' />
+            <p className='text-start'>Step into your new story. Prime Trims is more than just a barbershop — it's a space to relax, recharge, and transform your style. Located in the heart of the city, we bring quality grooming and a personal touch to every visit.</p>
+          </div>
         </section>
         <section id='services' className='text-center flex flex-col justify-center scroll-mt-22'>
           <h1>Services</h1>
@@ -50,8 +53,28 @@ function App() {
             </div>
           </div>
         </section>
-        <section id='inspiration' className='text-center flex flex-col justify-center scroll-mt-22'>
-          <h1>Inspiration</h1>
+        <section id='pricelist' className='text-center flex flex-col justify-center scroll-mt-22 min-h-screen'>
+          <h1>Price List</h1>
+          <div className='flex flex-col mb-12'>
+            <div className='flex flex-row justify-between'>
+              <h2 className='font-semibold'>Haircut + Wash + Hot Towel</h2>
+              <h2 className='font-bold'>70K</h2>
+            </div>
+            <hr className='border-t border-gray-300 my-3' />
+            <div className='flex flex-row justify-between'>
+              <h2 className='font-semibold'>Shaving</h2>
+              <h2 className='font-bold'>50K</h2>
+            </div>
+            <hr className='border-t border-gray-300 my-3' />
+            <div className='flex flex-row justify-between'>
+              <h2 className='font-semibold'>Basic Coloring</h2>
+              <h2 className='font-bold'>100K</h2>
+            </div>
+          </div>
+          <button className='w-full max-w-[200px] mx-auto'>Book Now!</button>
+        </section>
+        <section id='gallery' className='text-center flex flex-col justify-center scroll-mt-22'>
+          <h1>Gallery</h1>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-12'>
             <img src='/result1.webp' />
             <img src='/result2.webp' />
