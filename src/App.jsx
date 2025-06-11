@@ -1,6 +1,7 @@
 import { Brush, Droplets, Scissors, Thermometer } from 'lucide-react'
 import './App.css'
-import Header from './components/Header/Header'
+import Header from './components/Header/Header.jsx'
+import Footer from './components/Footer/Footer.jsx'
 import { TbRazorElectric } from 'react-icons/tb'
 
 function App() {
@@ -83,7 +84,7 @@ function App() {
           </div>
         </section>
       </main>
-    
+      <Footer/>
     </>
   )
 }
