@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import { TbRazorElectric } from "react-icons/tb";
+import service from "./data/service.jsx";
+import ServiceCard from "./components/Cards/ServiceCard.jsx";
 
 function App() {
   return (
@@ -55,51 +57,14 @@ function App() {
             confident.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-            <div className="w-full max-w-full aspect-[2/1] justify-center items-center flex flex-col gap-3">
-              <Scissors size={48} />
-              <h3>Haircut</h3>
-              <p>
-                Precision haircuts tailored to your style. Whether it's a
-                classic taper, modern fade, or trendy crop, our barbers ensure
-                you walk out sharp and confident.
-              </p>
-            </div>
-            <div className="w-full max-w-full aspect-[2/1] justify-center items-center flex flex-col gap-3">
-              <Droplets size={48} />
-              <h3>Hairwash</h3>
-              <p>
-                A relaxing hair wash using premium shampoo and scalp massage
-                techniques to cleanse and refresh your hair before or after your
-                haircut.
-              </p>
-            </div>
-            <div className="w-full max-w-full aspect-[2/1] justify-center items-center flex flex-col gap-3">
-              <Thermometer size={48} />
-              <h3>Hot Towel</h3>
-              <p>
-                Experience a soothing hot towel treatment that opens pores,
-                softens facial hair, and preps your skin for the ultimate shave
-                or relaxation.
-              </p>
-            </div>
-            <div className="w-full max-w-full aspect-[2/1] justify-center items-center flex flex-col gap-3">
-              <TbRazorElectric size={48} />
-              <h3>Shaving</h3>
-              <p>
-                A clean, smooth shave using traditional straight razors and warm
-                lather for precision and comfort. Includes post-shave balm for
-                refreshed skin.
-              </p>
-            </div>
-            <div className="w-full max-w-full md:max-w-[476px] mx-auto aspect-[2/1] justify-center items-center flex flex-col gap-3 col-span-1 md:col-span-2">
-              <Brush size={48} />
-              <h3>Basic Coloring</h3>
-              <p>
-                Enhance or refresh your look with basic hair coloring services.
-                Ideal for covering grays or trying subtle tones without full dye
-                jobs.
-              </p>
-            </div>
+            {service.map((item, index) => (
+              <ServiceCard
+                key={index}
+                icon={item.icon}
+                name={item.name}
+                description={item.description}
+              />
+            ))}
           </div>
         </section>
         <section
