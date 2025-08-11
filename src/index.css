@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
   --color-background: #060455;
   --color-mint: #72ffb6;
   --color-deepIndigo: #151462;
   --color-lavender: #e9adf7;
 }
-
 
 :root {
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
@@ -15,8 +14,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #1E1E1E;
+  color: #1f2937;
+  background-color: #f8f9fa;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -41,32 +40,31 @@ a:hover {
   min-height: 100vh;
 } */
 
-
 h1 {
-  @apply text-5xl leading-tight text-white mb-4 font-semibold;
+  @apply text-5xl leading-tight mb-4 font-semibold;
 }
 
 h2 {
   @apply text-4xl leading-snug;
 }
 
-h3{
+h3 {
   @apply text-3xl leading-snug;
 }
 
-h4{
+h4 {
   @apply text-2xl leading-normal;
 }
 
-h5{
+h5 {
   @apply text-xl leading-relaxed;
 }
 
-p{
+p {
   @apply text-base leading-relaxed;
 }
 
-button{
+button {
   @apply rounded-full bg-mint text-black px-4 py-2 text-xl font-bold cursor-pointer hover:bg-lavender transition-colors duration-300;
 }
 
