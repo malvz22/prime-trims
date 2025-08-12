@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import { TbRazorElectric } from "react-icons/tb";
 import service from "./data/service.jsx";
 import ServiceCard from "./components/Cards/ServiceCard.jsx";
+import price from "./data/price.jsx";
 
 function App() {
   return (
@@ -73,20 +74,17 @@ function App() {
         >
           <h1>Price List</h1>
           <div className="flex flex-col mb-12">
-            <div className="flex flex-row justify-between">
-              <h2 className="font-semibold">Haircut + Wash + Hot Towel</h2>
-              <h2 className="font-bold">70K</h2>
-            </div>
-            <hr className="border-t border-gray-300 my-3" />
-            <div className="flex flex-row justify-between">
-              <h2 className="font-semibold">Shaving</h2>
-              <h2 className="font-bold">50K</h2>
-            </div>
-            <hr className="border-t border-gray-300 my-3" />
-            <div className="flex flex-row justify-between">
-              <h2 className="font-semibold">Basic Coloring</h2>
-              <h2 className="font-bold">100K</h2>
-            </div>
+            {price.map((item, index) => (
+              <div key={index} className="flex flex-col">
+                <div className="flex flex-row justify-between items-start">
+                  <h2 className="font-semibold text-start">{item.name}</h2>
+                  <h2 className="font-bold">{item.price}</h2>
+                </div>
+                {index < price.length - 1 && (
+                  <hr className="border-t border-gray-300 my-3" />
+                )}
+              </div>
+            ))}
           </div>
           <a
             href="https://linktr.ee/primetrims?utm_source=linktree_profile_share&ltsid=7f35900f-0d17-413a-b3c3-44d1ec13c5f1"
