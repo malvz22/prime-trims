@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex flex-col justify-between w-full max-w-[1024px] px-4">
         <div className="justify-start md:justify-between flex flex-col md:flex-row py-2 items-center gap-5">
           <img src="primetrims-logo.png" className="w-[80px]" />
-          <div className="flex flex-col md:flex-row gap-3">
+          <div className="flex flex-col md:flex-row gap-3 text-center md:text-left">
             <a
               href="#home"
               className=" text-[16px] hover:text-mint transition-colors duration-300 font-medium"

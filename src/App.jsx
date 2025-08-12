@@ -16,9 +16,9 @@ function App() {
           id="home"
           className="flex flex-col items-center justify-center min-h-screen text-center"
         >
-          <img src="/primetrims-logo.png" className="" />
-          <h1>Haircuts for Everyone!</h1>
-          <h2 className="mb-4">Transform your look with us!</h2>
+          <img src="/primetrims-logo.png" className="mb-6" />
+          <h1 className="mb-2">Haircuts for Everyone!</h1>
+          <h2 className="mb-6">Transform your look with us!</h2>
           <a
             href="https://linktr.ee/primetrims?utm_source=linktree_profile_share&ltsid=7f35900f-0d17-413a-b3c3-44d1ec13c5f1"
             target="_blank"
@@ -32,10 +32,10 @@ function App() {
           className="text-center flex flex-col justify-center scroll-mt-22 py-4 min-h-screen"
         >
           <h1>Welcome to PRIME TRIMS</h1>
-          <div className="flex flex-row w-full max-w-full gap-3">
+          <div className="flex flex-col md:flex-row items-center md:items-start w-full max-w-full gap-3">
             <img
               src="/barber.jpg"
-              className="w-[50%] object-cover rounded-2xl"
+              className="w-full md:w-[50%] object-cover rounded-2xl"
             />
             <p className="text-start">
               Step into your new story. Prime Trims is more than just a
@@ -50,7 +50,7 @@ function App() {
           className="text-center flex flex-col justify-center scroll-mt-22"
         >
           <h1>Services</h1>
-          <p className="text-white mb-4">
+          <p className="mb-4">
             At Prime Trims, we believe in providing top-notch grooming services
             that cater to your unique style and preferences. Our skilled barbers
             are dedicated to delivering exceptional haircuts, shaves, and

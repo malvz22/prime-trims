@@ -1,44 +1,58 @@
+import { RxHamburgerMenu } from "react-icons/rx";
+import navigation from "../../data/navigation";
+import { useState } from "react";
+
 const Header = () => {
+  const [menu, setMenu] = useState(false);
+
+  const handleMenu = () => {
+    setMenu(!menu);
+    console.log("menu open:", menu);
+  };
+
   return (
-    <header className="w-full max-w-full flex items-center justify-between p-4 bg-white text-[#1f2937] shadow-md sticky top-0 z-50">
-      <div className="flex flex-row justify-between mx-auto w-full max-w-[1024px] items-center">
+    <header className="w-full max-w-full flex flex-col items-center justify-between  bg-white text-[#1f2937] shadow-md fixed top-0 right-0 z-[1000]">
+      <div className="flex flex-row justify-between mx-auto w-full max-w-[1024px] items-center p-4">
         <a href="/">
           <img src="/primetrims-logo.png" className="w-[80px]" />
         </a>
 
-        <div className="flex flex-row gap-4">
-          <a
-            href="#home"
-            className="hover:text-mint transition-colors duration-300 font-semibold text-lg"
-          >
-            Home
-          </a>
-          <a
-            href="#about-us"
-            className="hover:text-mint transition-colors duration-300 font-semibold text-lg"
-          >
-            About Us
-          </a>
-          <a
-            href="#services"
-            className="hover:text-mint transition-colors duration-300 font-semibold text-lg"
-          >
-            Services
-          </a>
-          <a
-            href="#pricelist"
-            className="hover:text-mint transition-colors duration-300 font-semibold text-lg"
-          >
-            Pricelist
-          </a>
-          <a
-            href="#gallery"
-            className="hover:text-mint transition-colors duration-300 font-semibold text-lg"
-          >
-            Gallery
-          </a>
+        {/* Desktop Layout */}
+
+        <ul className="gap-4 hidden md:flex flex-row">
+          {navigation.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.href}
+                className="hover:text-mint transition-colors duration-300 font-semibold text-lg"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile Layout */}
+
+        <div onClick={handleMenu} className="md:hidden">
+          <RxHamburgerMenu size={28} />
         </div>
       </div>
+      {menu && (
+        <ul className="w-full max-w-full bg-white top-0 left-0 z-[999] flex flex-col items-center justify-center">
+          {navigation.map((item, index) => (
+            <li key={index} className="py-2 w-full max-w-full text-center">
+              <a
+                href={item.href}
+                className="hover:text-mint transition-colors duration-300 font-semibold text-lg w-full block"
+                onClick={handleMenu}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </header>
   );
 };
