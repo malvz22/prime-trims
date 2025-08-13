@@ -1,4 +1,5 @@
 import { FaInstagram } from "react-icons/fa";
+import navigation from "../../data/navigation";
 
 const Footer = () => {
   return (
@@ -7,36 +8,15 @@ const Footer = () => {
         <div className="justify-start md:justify-between flex flex-col md:flex-row py-2 items-center gap-5">
           <img src="primetrims-logo.png" className="w-[80px]" />
           <div className="flex flex-col md:flex-row gap-3 text-center md:text-left">
-            <a
-              href="#home"
-              className=" text-[16px] hover:text-mint transition-colors duration-300 font-medium"
-            >
-              Home
-            </a>
-            <a
-              href="#about-us"
-              className=" hover:text-mint transition-colors duration-300 font-medium"
-            >
-              About Us
-            </a>
-            <a
-              href="#services"
-              className=" text-[16px] hover:text-mint transition-colors duration-300 font-medium"
-            >
-              Services
-            </a>
-            <a
-              href="#pricelist"
-              className=" text-[16px] hover:text-mint transition-colors duration-300 font-medium"
-            >
-              Pricelist
-            </a>
-            <a
-              href="#gallery"
-              className=" text-[16px] hover:text-mint transition-colors duration-300 font-medium"
-            >
-              Gallery
-            </a>
+            {navigation.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                className="text-[16px] hover:text-mint transition-colors duration-300 font-medium"
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
           <a
             href="https://www.instagram.com/primetrims_/"

@@ -57,14 +57,22 @@ function App() {
             grooming experiences that leave you looking sharp and feeling
             confident.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {service.map((item, index) => (
-              <ServiceCard
+              <div
                 key={index}
-                icon={item.icon}
-                name={item.name}
-                description={item.description}
-              />
+                className={`${
+                  index === service.length - 1 && service.length % 2 !== 0
+                    ? "md:col-span-2 md:w-1/2 md:mx-auto"
+                    : ""
+                }`}
+              >
+                <ServiceCard
+                  icon={item.icon}
+                  name={item.name}
+                  description={item.description}
+                />
+              </div>
             ))}
           </div>
         </section>
