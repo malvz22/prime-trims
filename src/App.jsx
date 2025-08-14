@@ -31,20 +31,24 @@ function App() {
         </section>
         <section
           id="about-us"
-          className="text-center flex items-center justify-center scroll-mt-22 min-h-screen section-container"
+          className="text-center flex items-center justify-center scroll-mt-22 bg-lavender"
         >
-          <div className="flex flex-col">
+          <div className="flex flex-col section-container">
             <h1>Welcome to PRIME TRIMS</h1>
-            <div className="flex flex-col md:flex-row items-center md:items-start w-full max-w-full gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start w-full max-w-full gap-6">
               <img
                 src="/barber.jpg"
                 className="w-full md:w-[50%] object-cover rounded-2xl"
               />
               <p className="text-start">
-                Step into your new story. Prime Trims is more than just a
-                barbershop — it's a space to relax, recharge, and transform your
-                style. Located in the heart of the city, we bring quality
-                grooming and a personal touch to every visit.
+                At Prime Trims, we believe a great haircut does more than just
+                change your look — it boosts your confidence. Our dedicated
+                stylist combines precision techniques with the latest trends to
+                give you a style that’s uniquely yours. From sharp fades to
+                timeless classics, every cut is crafted with care in a relaxed,
+                friendly space. Whether you’re here for a quick trim or a
+                complete transformation, we’re ready to make you look and feel
+                your best.
               </p>
             </div>
           </div>
@@ -82,9 +86,9 @@ function App() {
         </section>
         <section
           id="pricelist"
-          className="text-center flex flex-col justify-center scroll-mt-22 min-h-screen section-container"
+          className="text-center flex flex-col justify-center scroll-mt-22 min-h-screen  text-white bg-deepIndigo"
         >
-          <div className="flex flex-col px-4">
+          <div className="flex flex-col section-container">
             <h1>Price List</h1>
             <div className="flex flex-col mb-12">
               {price.map((item, index) => (
@@ -130,6 +134,10 @@ function App() {
         >
           <div className="flex flex-col section-container">
             <h1>Contact</h1>
+            <p className="mb-4">
+              For inquiries or to book an appointment, please reach out to us
+              via our social media or contact number.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 text-start gap-4 mb-12">
               <div className="flex flex-col">
                 <img
@@ -151,21 +159,39 @@ function App() {
                       size={30}
                       className="bg-mint rounded-full p-1 text-deepIndigo"
                     />
-                    +62 895361534253
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=0895361534253&text&type=phone_number&app_absent=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      +62 895361534253
+                    </a>
                   </li>
                   <li className="flex items-center gap-2 mb-2">
                     <FaWhatsapp
                       size={30}
                       className="bg-mint rounded-full p-1 text-deepIndigo"
                     />
-                    +62 895361534253
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=0895361534253&text&type=phone_number&app_absent=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      +62 895361534253
+                    </a>
                   </li>
                   <li className="flex items-center gap-2 mb-2">
                     <FaInstagram
                       size={30}
                       className="bg-mint rounded-full p-1 text-deepIndigo"
                     />
-                    primetrims_
+                    <a
+                      href="https://www.instagram.com/primetrims_/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      primetrims_
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -183,17 +209,14 @@ function App() {
                 />
               </div>
             </div>
-            <p className="mb-4">
-              For inquiries or to book an appointment, please reach out to us
-              via our social media or contact number.
-            </p>
-            <a
+
+            {/* <a
               href="https://linktr.ee/primetrims?utm_source=linktree_profile_share&ltsid=7f35900f-0d17-413a-b3c3-44d1ec13c5f1"
               target="_blank"
               rel="noopener noreferrer"
             >
               <button>Contact Us</button>
-            </a>
+            </a> */}
           </div>
         </section>
       </main>

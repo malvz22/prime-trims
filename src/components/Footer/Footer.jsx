@@ -3,7 +3,7 @@ import navigation from "../../data/navigation";
 
 const Footer = () => {
   return (
-    <footer className="w-full max-w-full md:mx-auto flex flex-col items-center py-4 text-[#1f2937]">
+    <footer className="w-full max-w-full md:mx-auto flex flex-col items-center py-4 bg-deepIndigo text-white">
       <div className="flex flex-col justify-between w-full max-w-[1024px] px-4">
         <div className="justify-start md:justify-between flex flex-col md:flex-row py-2 items-center gap-5">
           <img src="primetrims-logo.png" className="w-[80px]" />
@@ -30,6 +30,7 @@ const Footer = () => {
           </a>
         </div>
         <hr className="border-t border-gray-300 my-3 w-full max-w-[1024px] px-4" />
+        <p className="text-center">© Copyright PRIME TRIMS</p>
       </div>
     </footer>
   );
