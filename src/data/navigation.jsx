@@ -19,6 +19,10 @@ const navigation = [
     name: "Gallery",
     href: "#gallery",
   },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
 ];
 
 export default navigation;

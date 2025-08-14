@@ -68,6 +68,10 @@ button {
   @apply rounded-full bg-mint text-black px-4 py-2 text-xl font-bold cursor-pointer hover:bg-lavender transition-colors duration-300;
 }
 
+.section-container {
+  @apply w-full max-w-[1024px] mx-auto px-4 py-8;
+}
+
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;
