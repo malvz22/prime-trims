@@ -9,6 +9,7 @@ import price from "./data/price.jsx";
 import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import { RxScissors } from "react-icons/rx";
+import ImageContainer from "./components/Containers/ImageContainer.jsx";
 
 function App() {
   return (
@@ -151,10 +152,18 @@ function App() {
           <div className="flex flex-col">
             <h1>Gallery</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-              <img src="/result1.webp" />
-              <img src="/result2.webp" />
-              <img src="/result3.webp" />
-              <img src="/result4.webp" />
+              <ImageContainer>
+                <img src="/result1.webp" loading="lazy" />
+              </ImageContainer>
+              <ImageContainer>
+                <img src="/result2.webp" loading="lazy" />
+              </ImageContainer>
+              <ImageContainer>
+                <img src="/result3.webp" loading="lazy" />
+              </ImageContainer>
+              <ImageContainer>
+                <img src="/result4.webp" loading="lazy" />
+              </ImageContainer>
             </div>
           </div>
         </section>
