@@ -10,6 +10,7 @@ import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import { RxScissors } from "react-icons/rx";
 import ImageContainer from "./components/Containers/ImageContainer.jsx";
+import Gallery from "./components/Containers/Gallery.jsx";
 
 function App() {
   return (
@@ -149,23 +150,7 @@ function App() {
           id="gallery"
           className="text-center flex flex-col justify-center scroll-mt-22 section-container"
         >
-          <div className="flex flex-col">
-            <h1>Gallery</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-              <ImageContainer>
-                <img src="/result1.webp" loading="lazy" />
-              </ImageContainer>
-              <ImageContainer>
-                <img src="/result2.webp" loading="lazy" />
-              </ImageContainer>
-              <ImageContainer>
-                <img src="/result3.webp" loading="lazy" />
-              </ImageContainer>
-              <ImageContainer>
-                <img src="/result4.webp" loading="lazy" />
-              </ImageContainer>
-            </div>
-          </div>
+          <Gallery />
         </section>
         <section
           id="contact"

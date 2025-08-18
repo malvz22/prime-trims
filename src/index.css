@@ -77,7 +77,7 @@ button {
 }
 
 .image-container {
-  @apply overflow-hidden inline-block;
+  @apply overflow-hidden inline-block cursor-pointer;
 }
 
 .image-container img {
