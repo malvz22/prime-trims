@@ -8,13 +8,14 @@ import ServiceCard from "./components/Cards/ServiceCard.jsx";
 import price from "./data/price.jsx";
 import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
+import { RxScissors } from "react-icons/rx";
 
 function App() {
   return (
     <>
       <Header />
       <main className="">
-        <section
+        {/* <section
           id="home"
           className="flex flex-col items-center justify-center min-h-screen text-center"
         >
@@ -28,6 +29,22 @@ function App() {
           >
             <button>Book Now!</button>
           </a>
+        </section> */}
+        <section id="home" className="">
+          <div className="bg-[url(/hero-bg.webp)] bg-center w-full max-w-full min-h-screen">
+            <div className="flex flex-col items-center justify-center text-center h-screen text-white shadow-lg px-4">
+              <img src="/primetrims-logo.png" className="mb-6" />
+              <h1 className="mb-2 text-shadow">Haircuts for Everyone!</h1>
+              <h2 className="mb-6">Transform your look with us!</h2>
+              <a
+                href="https://linktr.ee/primetrims?utm_source=linktree_profile_share&ltsid=7f35900f-0d17-413a-b3c3-44d1ec13c5f1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>Book Now!</button>
+              </a>
+            </div>
+          </div>
         </section>
         <section
           id="about-us"
@@ -55,34 +72,47 @@ function App() {
         </section>
         <section
           id="services"
-          className="text-center flex flex-col justify-center scroll-mt-22 section-container"
+          className="text-center flex flex-col justify-center scroll-mt-22 w-full max-w-full relative overflow-hidden"
         >
-          <h1>Services</h1>
-          <p className="mb-4">
-            At Prime Trims, we believe in providing top-notch grooming services
-            that cater to your unique style and preferences. Our skilled barbers
-            are dedicated to delivering exceptional haircuts, shaves, and
-            grooming experiences that leave you looking sharp and feeling
-            confident.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            {service.map((item, index) => (
-              <div
-                key={index}
-                className={`${
-                  index === service.length - 1 && service.length % 2 !== 0
-                    ? "md:col-span-2 md:w-1/2 md:mx-auto"
-                    : ""
-                }`}
-              >
-                <ServiceCard
-                  icon={item.icon}
-                  name={item.name}
-                  description={item.description}
-                />
-              </div>
-            ))}
+          <div className="section-container z-20">
+            <h1>Services</h1>
+            <p className="mb-4">
+              At Prime Trims, we believe in providing top-notch grooming
+              services that cater to your unique style and preferences. Our
+              skilled barbers are dedicated to delivering exceptional haircuts,
+              shaves, and grooming experiences that leave you looking sharp and
+              feeling confident.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {service.map((item, index) => (
+                <div
+                  key={index}
+                  className={`${
+                    index === service.length - 1 && service.length % 2 !== 0
+                      ? "md:col-span-2 md:w-1/2 md:mx-auto"
+                      : ""
+                  }`}
+                >
+                  <ServiceCard
+                    icon={item.icon}
+                    name={item.name}
+                    description={item.description}
+                    bgColor={item.bgColor}
+                    textColor={item.textColor}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
+
+          <RxScissors
+            size={320}
+            className="absolute top-0 left-0 text-black/20 rotate-45"
+          />
+          <RxScissors
+            size={320}
+            className="absolute bottom-0 right-0 text-black/20 rotate-240"
+          />
         </section>
         <section
           id="pricelist"
