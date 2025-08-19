@@ -8,6 +8,7 @@ import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import { RxScissors } from "react-icons/rx";
 import Gallery from "./components/Containers/Gallery.jsx";
+import { motion as Motion } from "motion/react";
 
 function App() {
   return (
@@ -79,26 +80,33 @@ function App() {
               shaves, and grooming experiences that leave you looking sharp and
               feeling confident.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 animate-fadeIn">
-              {service.map((item, index) => (
-                <div
-                  key={index}
-                  className={`${
-                    index === service.length - 1 && service.length % 2 !== 0
-                      ? "md:col-span-2 md:w-1/2 md:mx-auto"
-                      : ""
-                  }`}
-                >
-                  <ServiceCard
-                    icon={item.icon}
-                    name={item.name}
-                    description={item.description}
-                    bgColor={item.bgColor}
-                    textColor={item.textColor}
-                  />
-                </div>
-              ))}
-            </div>
+            <Motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.9 }}
+              viewport={{ once: false }}
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {service.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`${
+                      index === service.length - 1 && service.length % 2 !== 0
+                        ? "md:col-span-2 md:w-1/2 md:mx-auto"
+                        : ""
+                    }`}
+                  >
+                    <ServiceCard
+                      icon={item.icon}
+                      name={item.name}
+                      description={item.description}
+                      bgColor={item.bgColor}
+                      textColor={item.textColor}
+                    />
+                  </div>
+                ))}
+              </div>
+            </Motion.div>
           </div>
 
           <RxScissors
