@@ -192,7 +192,7 @@ function App() {
         >
           <div className="flex flex-col section-container">
             <h1>Contact</h1>
-            <p className="mb-4">
+            <p className="mb-4 text-start md:text-center">
               For inquiries or to book an appointment, please reach out to us
               via our social media or contact number.
             </p>
