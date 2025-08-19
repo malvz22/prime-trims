@@ -120,29 +120,61 @@ function App() {
         </section>
         <section
           id="pricelist"
-          className="text-center flex flex-col justify-center scroll-mt-22 min-h-screen  text-white bg-deepIndigo"
+          className="text-center flex flex-col justify-center scroll-mt-22 min-h-screen text-white bg-deepIndigo"
         >
           <div className="flex flex-col section-container">
-            <h1>Price List</h1>
-            <div className="flex flex-col mb-12">
+            <Motion.h1
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.9 }}
+              viewport={{ once: false }}
+            >
+              Price List
+            </Motion.h1>
+            <Motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1, transition: { staggerChildren: 0.3 } }}
+              className="flex flex-col mb-12"
+              viewport={{ once: false }}
+            >
               {price.map((item, index) => (
-                <div key={index} className="flex flex-col">
+                <Motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.9 }}
+                  viewport={{ once: false }}
+                  key={index}
+                  className="flex flex-col"
+                >
                   <div className="flex flex-row justify-between items-start">
                     <h2 className="font-semibold text-start">{item.name}</h2>
                     <h2 className="font-bold">{item.price}</h2>
                   </div>
                   {index < price.length - 1 && (
-                    <hr className="border-t border-gray-300 my-3" />
+                    <Motion.hr
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.9 }}
+                      viewport={{ once: false }}
+                      className="border-t border-gray-300 my-3"
+                    />
                   )}
-                </div>
+                </Motion.div>
               ))}
-            </div>
+            </Motion.div>
             <a
               href="https://linktr.ee/primetrims?utm_source=linktree_profile_share&ltsid=7f35900f-0d17-413a-b3c3-44d1ec13c5f1"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button>Book Now!</button>
+              <Motion.button
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.9, delay: 0.2 }}
+                viewport={{ once: false }}
+              >
+                Book Now!
+              </Motion.button>
             </a>
           </div>
 
