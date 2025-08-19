@@ -17,33 +17,30 @@ function App() {
     <>
       <Header />
       <main className="">
-        {/* <section
-          id="home"
-          className="flex flex-col items-center justify-center min-h-screen text-center"
-        >
-          <img src="/primetrims-logo.png" className="mb-6" />
-          <h1 className="mb-2">Haircuts for Everyone!</h1>
-          <h2 className="mb-6">Transform your look with us!</h2>
-          <a
-            href="https://linktr.ee/primetrims?utm_source=linktree_profile_share&ltsid=7f35900f-0d17-413a-b3c3-44d1ec13c5f1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button>Book Now!</button>
-          </a>
-        </section> */}
         <section id="home" className="">
-          <div className="bg-[url(/hero-bg.webp)] bg-center w-full max-w-full min-h-screen">
+          <div className="bg-[url(/hero-bg.webp)] bg-center bg-no-repeat w-full max-w-full min-h-screen">
             <div className="flex flex-col items-center justify-center text-center h-screen text-white shadow-lg px-4">
               <img src="/primetrims-logo.png" className="mb-6" />
-              <h1 className="mb-2 text-shadow">Haircuts for Everyone!</h1>
-              <h2 className="mb-6">Transform your look with us!</h2>
+              <h1 className="mb-2 text-shadow animate-fadeIn">
+                Haircuts for Everyone!
+              </h1>
+              <h2
+                className="mb-6 animate-fadeIn delay-300 opacity-0"
+                style={{ animationDelay: "0.3s" }}
+              >
+                Transform your look with us!
+              </h2>
               <a
                 href="https://linktr.ee/primetrims?utm_source=linktree_profile_share&ltsid=7f35900f-0d17-413a-b3c3-44d1ec13c5f1"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button>Book Now!</button>
+                <button
+                  className="opacity-0 animate-fadeIn delay-[600ms]"
+                  style={{ animationDelay: "0.6s" }}
+                >
+                  Book Now!
+                </button>
               </a>
             </div>
           </div>

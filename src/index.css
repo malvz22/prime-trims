@@ -5,6 +5,17 @@
   --color-mint: #72ffb6;
   --color-deepIndigo: #151462;
   --color-lavender: #e9adf7;
+
+  --animate-fadeIn: fadeIn 1s ease-in-out forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 :root {
