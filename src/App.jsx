@@ -1,15 +1,12 @@
-import { Brush, Droplets, Scissors, Thermometer } from "lucide-react";
 import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import { TbRazorElectric } from "react-icons/tb";
 import service from "./data/service.jsx";
 import ServiceCard from "./components/Cards/ServiceCard.jsx";
 import price from "./data/price.jsx";
 import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import { RxScissors } from "react-icons/rx";
-import ImageContainer from "./components/Containers/ImageContainer.jsx";
 import Gallery from "./components/Containers/Gallery.jsx";
 
 function App() {
@@ -82,7 +79,7 @@ function App() {
               shaves, and grooming experiences that leave you looking sharp and
               feeling confident.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 animate-fadeIn">
               {service.map((item, index) => (
                 <div
                   key={index}
