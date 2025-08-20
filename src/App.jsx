@@ -180,7 +180,7 @@ function App() {
 
           {/* Background Elements */}
 
-          <div className="absolute bottom-[-55%] left-19 translate-x-[-50%] translate-y-[-50%] w-[800px] h-[800px]">
+          <div className="absolute bottom-[-55%] left-19 translate-x-[-50%] translate-y-[-50%] w-[600px] md:w-[800px] h-[600px] md:h-[800px]">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill="#302E76"
@@ -189,7 +189,7 @@ function App() {
               />
             </svg>
           </div>
-          <div className="absolute bottom-[-35%] left-[-120px] translate-x-[-50%] translate-y-[-50%] w-[700px] h-[700px]">
+          <div className="absolute bottom-[-35%] left-[-120px] translate-x-[-50%] translate-y-[-50%] w-[500px] h-[500px]">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill="none"
@@ -209,7 +209,7 @@ function App() {
               />
             </svg>
           </div>
-          <div className="absolute top-[10%] right-[-16%] translate-y-[-50%] w-[600px] h-[600px]">
+          <div className="absolute top-[10%] right-[-30%] translate-y-[-50%] w-[600px] h-[600px]">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill="#302E76"
@@ -218,7 +218,7 @@ function App() {
               />
             </svg>
           </div>
-          <div className="absolute top-[-5%] right-[-8%] translate-y-[-50%] w-[550px] h-[550px] z-20">
+          <div className="absolute top-[-5%] md:top-[10%] right-[-58%] md:right-[-5%] translate-y-[-50%] w-[550px] h-[550px] z-20">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill="none"
