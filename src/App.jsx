@@ -120,9 +120,9 @@ function App() {
         </section>
         <section
           id="pricelist"
-          className="text-center flex flex-col justify-center scroll-mt-22 min-h-screen text-white bg-deepIndigo"
+          className="text-center flex flex-col justify-center scroll-mt-22 min-h-screen text-white bg-deepIndigo relative overflow-hidden"
         >
-          <div className="flex flex-col section-container">
+          <div className="flex flex-col section-container z-50">
             <Motion.h1
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -178,7 +178,68 @@ function App() {
             </a>
           </div>
 
-          {/* <button className="w-full max-w-[200px] mx-auto">Book Now!</button> */}
+          {/* Background Elements */}
+
+          <div className="absolute bottom-[-55%] left-19 translate-x-[-50%] translate-y-[-50%] w-[800px] h-[800px]">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#302E76"
+                d="M45.1,-66.4C56.5,-53.7,62.6,-38,65.5,-22.8C68.4,-7.5,68.2,7.3,63.7,20.6C59.3,34,50.6,45.9,39.3,55.4C28,65,14,72.1,-0.8,73.3C-15.7,74.4,-31.3,69.6,-46.7,61.3C-62,53.1,-76.9,41.5,-79.7,27.2C-82.5,13,-73.1,-3.8,-67,-21.5C-60.9,-39.2,-58.1,-57.7,-47.5,-70.7C-36.9,-83.7,-18.5,-91.1,-0.8,-90C16.8,-88.9,33.6,-79.2,45.1,-66.4Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+          <div className="absolute bottom-[-35%] left-[-120px] translate-x-[-50%] translate-y-[-50%] w-[700px] h-[700px]">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="none"
+                stroke="#72ffb6"
+                stroke-width="1.5"
+                d="M40.3,-34.6C56.5,-24.2,76.7,-12.1,78.3,1.7C80,15.4,63.1,30.9,47,39.4C30.9,48,15.4,49.7,0.9,48.7C-13.5,47.8,-27.1,44.2,-39,35.6C-51,27.1,-61.4,13.5,-61.6,-0.2C-61.7,-13.9,-51.7,-27.8,-39.7,-38.1C-27.8,-48.5,-13.9,-55.3,-0.9,-54.4C12.1,-53.5,24.2,-44.9,40.3,-34.6Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+          <div className="absolute top-[30%] left-1 translate-x-[-50%] translate-y-[-50%] w-[500px] h-[500px]">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#302E76"
+                d="M45.1,-66.4C56.5,-53.7,62.6,-38,65.5,-22.8C68.4,-7.5,68.2,7.3,63.7,20.6C59.3,34,50.6,45.9,39.3,55.4C28,65,14,72.1,-0.8,73.3C-15.7,74.4,-31.3,69.6,-46.7,61.3C-62,53.1,-76.9,41.5,-79.7,27.2C-82.5,13,-73.1,-3.8,-67,-21.5C-60.9,-39.2,-58.1,-57.7,-47.5,-70.7C-36.9,-83.7,-18.5,-91.1,-0.8,-90C16.8,-88.9,33.6,-79.2,45.1,-66.4Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+          <div className="absolute top-[10%] right-[-16%] translate-y-[-50%] w-[600px] h-[600px]">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#302E76"
+                d="M38.2,-58.7C47.7,-53.3,52.4,-39.7,54.1,-27.3C55.8,-14.9,54.5,-3.6,56.8,11.1C59.2,25.7,65.3,43.8,59.1,51.5C52.9,59.3,34.4,56.6,19.4,56.6C4.5,56.6,-6.8,59.2,-16,55.8C-25.2,52.5,-32.3,43.3,-42.6,34.9C-52.9,26.5,-66.4,19,-70.5,8.5C-74.5,-2,-69,-15.5,-63.8,-30.1C-58.7,-44.8,-53.9,-60.5,-43.3,-65.5C-32.7,-70.4,-16.3,-64.4,-1,-62.9C14.3,-61.3,28.7,-64.1,38.2,-58.7Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+          <div className="absolute top-[-5%] right-[-8%] translate-y-[-50%] w-[550px] h-[550px] z-20">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="none"
+                stroke="#72ffb6"
+                stroke-width="1.5"
+                d="M48.6,-73.1C62.4,-66.7,72.7,-52.3,77.8,-36.8C82.9,-21.3,82.8,-4.7,79.9,11.1C76.9,26.8,71.2,41.8,61,52.1C50.9,62.4,36.2,68,20.9,73.6C5.6,79.1,-10.4,84.6,-24.1,81.1C-37.9,77.6,-49.3,65.1,-59.2,52.1C-69.2,39.2,-77.8,25.8,-81.8,10.6C-85.9,-4.7,-85.4,-21.7,-79.5,-36.9C-73.5,-52.1,-62.1,-65.4,-47.9,-71.7C-33.7,-78,-16.9,-77.3,0.2,-77.7C17.4,-78.1,34.7,-79.6,48.6,-73.1Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+          <div className="absolute top-[45%] right-[-440px] translate-y-[-50%] w-[700px] h-[700px]">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="none"
+                stroke="#72ffb6"
+                stroke-width="1.5"
+                d="M40.3,-34.6C56.5,-24.2,76.7,-12.1,78.3,1.7C80,15.4,63.1,30.9,47,39.4C30.9,48,15.4,49.7,0.9,48.7C-13.5,47.8,-27.1,44.2,-39,35.6C-51,27.1,-61.4,13.5,-61.6,-0.2C-61.7,-13.9,-51.7,-27.8,-39.7,-38.1C-27.8,-48.5,-13.9,-55.3,-0.9,-54.4C12.1,-53.5,24.2,-44.9,40.3,-34.6Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
         </section>
         <section
           id="gallery"
